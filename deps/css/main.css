@@ -8,20 +8,21 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(../images/background-img.png); 
-  background-size:cover; 
+  background-image: url(../images/background-img-2.png); 
+  background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
-  height: 100%; 
-  width: 100%; 
+  background-attachment: fixed;
+  height: 100vh; 
+  width: 100%;
+  margin: 0;
 }
 
 main {
   width: 100%;
-  max-width: 1440px;
-  height: 1081px;
-  flex-grow: 0;
-  background-color: rgba(47, 46, 70, 0.9); 
+  max-width: 1180px;
+  height: 1390px;
+  background-color: rgba(47, 46, 70, 0.7); 
   margin-top: 33px;
 }
 
@@ -31,48 +32,56 @@ main {
 }
 
 .info {
-  width: 100%; 
-  max-width: 929px; 
-  height: 43px; 
-  margin-right: 33.5px;  
-  background-color: rgba(82, 82, 82, 0.9); 
+  width: 1180px; 
+  height: 43px;  
+  background-color: rgba(58, 58, 58, 0.8); 
   display: flex;
   align-items: center;
-  padding-right: 100px;
+  justify-content: space-between;
 }
 
 .text-left {
   font-family: Arial, sans-serif;
   font-size: 20px;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   color: rgba(255, 255, 255, 0.9);
-  margin-left: 10px;
-  position: absolute;
+  margin-left: 30px;
+
 }
 
-.info-2 {
-  width: 100%;
-  max-width: 444px;
-  height: 43px;
-  background-color: rgba(82, 82, 82, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 33.5px;
+.more-horiz{
+  margin-right: 20px;
 }
 
 .text-right {
   font-family: Arial;
   font-size: 20px;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: rgba(255, 255, 255, 0.9);
+  margin-right: 160px;
+}
+
+.scroll {
+  width: 100%;
+  max-width: 1180px;
+  height: 244px;
+  background-color: rgba(54, 53, 80, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.asset-1{
+  margin-left: 45px;
+}
+
+.asset-5{
+  margin-right: 45px;
+}
+
+a img {
+  border: 2px solid #808080; /* Сірий колір обводки */
+  border-radius: 4px; /* Додаткове округлення куточків (опційно) */
 }
 
 .container-2{
@@ -80,15 +89,38 @@ main {
   justify-content: space-between;
 }
 
-.scroll {
-  width: 929px;
-  height: 244px;
-  background-color: #363550;
+.lastrel {
+  width: 730px;
+  height: 1036px;
+  background-color: rgba(54, 53, 80, 0.7) ;
+  margin-right: 33.5px;
 }
 
 .block1 {
   width: 443px;
   height: 492px;
+  background-color: rgba(54, 53, 80, 0.7);
+}
 
-  background-color: #363550;
+.view {
+  width: 444px;
+  height: 43px;
+  background-color: rgba(58, 58, 58, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-view {
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+.block2 {
+  width: 444px;
+  height: 501px;
+  background-color: rgba(54, 53, 80, 0.7);
 }
