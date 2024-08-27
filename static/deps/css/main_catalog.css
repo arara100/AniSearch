@@ -1,0 +1,175 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../images/background-img-2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 110vh;
+    width: 100%;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 1300px;
+    max-height: 2300px;
+    background-color: rgba(47, 46, 70, 0.7);
+    margin-top: 33px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.ani-link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    width: calc(100% - 280px);
+    height: calc(100% - 80px);
+    max-width: 1008px;
+    max-height: 1400px;
+    box-sizing: border-box;
+}
+
+.anime-item {
+    flex: 1 1 calc(20% - 10px);
+    max-width: calc(20% - 10px);
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.content-img {
+    width: 90%;
+    height: 90%;
+    max-height: 35vh;
+    border: 2px solid #808080;
+    border-radius: 5px;
+}
+
+.filters {
+    width: 280px;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.filter-group h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #ffffff;
+    text-align: center;
+    background-color: rgba(69, 67, 131, 0.7);
+    padding: 10px 0;
+    border-radius: 20px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Тінь */
+}
+
+.filter-group label {
+    display: block;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.filter-group input {
+    margin-right: 10px;
+}
+
+.filter-group input[type="checkbox"],
+.filter-group input[type="radio"] {
+    accent-color: #6c63ff;
+}
+
+.filter-content {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.filter-group.show .filter-content {
+    max-height: 2000px;
+    opacity: 1;
+}
+
+.filter-title {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-title:hover {
+    background-color: rgba(100, 96, 170, 0.7);
+}
+
+.content-text {
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgba(198, 198, 198, 0.9);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.pagination a,
+.pagination span {
+    color: white;
+    text-decoration: none;
+}
+
+.pagination-form {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.pagination-form input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    margin-right: 5px;
+    color: black;
+}
+
+.pagination-form input[type="submit"] {
+    padding: 5px 10px;
+    color: white;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+}
+
+.pagination-form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+label {
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    margin-bottom: 5px;
+}

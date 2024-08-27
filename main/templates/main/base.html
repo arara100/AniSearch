@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'deps/css/header.css' %}">
+    {% block css-add %}
+
+    {% endblock %}
+    <title>Головна</title>
+</head>
+
+<header>
+    <div class="menu-container">
+        <img src="{% static 'deps/icon/burger.png' %}" class="list" id="menu-button">
+    </div>
+
+    <a href="{% url 'main:index' %}" class="anisearch">
+        <h1>AniSearch</h1>
+    </a>
+
+    <li class="icons">
+        <a href="#"><img src="{% static 'deps/icon/search.png' %}" class="search"></a>
+        <a href="#"></a><img src="{% static 'deps/icon/inbox.png' %}" class="inbox"></a>
+        <a href="#"></a><img src="{% static 'deps/icon/forum.png' %}" class="forum"></a>
+        <a href="#"></a><img src="{% static 'deps/icon/profile.png' %}" class="profile"></a>
+    </li>
+</header>
+
+<body>
+<main>
+    {% block content %}
+
+    {% endblock %}
+</main>
+
+
+<div class="side-menu">
+    <ul class="menu-in">
+        <li><a href="{% url 'catalog:anime' %}">Аніме</a></li>
+        <li><a href="#">Манга</a></li>
+        <li><a href="#">Ренобе</a></li>
+        <li><a href="#">Новини</a></li>
+        <li><a href="#">Збірка франшиз</a></li>
+        <li><a href="#">Досягнення</a></li>
+        <li><a href="#">Голосування</a></li>
+    </ul>
+
+    <ul class="menu-in">
+        <li><a href="#">Про сайт</a></li>
+    </ul>
+</div>
+
+{% block js-add %}
+
+{% endblock %}
+
+<script src="{% static 'deps/js/menu.js' %}"></script>
+<script src="{% static 'deps/js/noscroll.js' %}"></script>
+</body>
+</html>

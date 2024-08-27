@@ -1,0 +1,55 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block css-add %}
+	<link rel="stylesheet" href="{% static 'deps/css/main.css' %}">
+{% endblock %}
+
+<body>
+<main>
+{% block content %}
+    <div class="container">
+        <div class="info">
+                <span class="text-left">
+                    Новинки
+                </span>
+            <img src="{% static 'deps/icon/more_horiz.png' %}" class="more-horiz">
+        </div>
+    </div>
+
+    <div class="scroll">
+        {% include 'catalog/anime_list_partial.html' %}
+    </div>
+    <div class="container">
+        <div class="info">
+                <span class="text-left">
+                    На Екранах
+                </span>
+            <span class="text-right">
+                    Топ рейтингу
+                </span>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="lastrel">
+            {% include 'catalog/anime_list_partial.html' %}
+        </div>
+        <div class="container-in">
+            <div class="block1">
+                {% include 'main/anime-list-tops.html' %}
+            </div>
+            <div class="view">
+                    <span class="top-view">
+                        Топ перереглядів
+                      </span>
+            </div>
+            <div class="block2">
+                {% include 'main/anime-list-tops.html' %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+</main>
+
+</body>
+</html>

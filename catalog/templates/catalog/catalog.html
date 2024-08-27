@@ -1,0 +1,141 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block css-add %}
+    <link rel="stylesheet" href="{% static 'deps/css/main_catalog.css' %}">
+{% endblock %}
+
+<body>
+<main>
+    {% block content %}
+        <div class="container">
+
+        {% include 'catalog/anime_list_partial.html' %}
+
+            <aside class="filters">
+                <form id="filter-form" action="" method="get">
+                    <div class="filter-group">
+                        <h3>Статус</h3>
+                        <label><input type="checkbox" name="status" value="upcoming"> Анонсовано</label>
+                        <label><input type="checkbox" name="status" value="airing"> Зараз виходить</label>
+                        <label><input type="checkbox" name="status" value="complete"> Вийшло</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Тип</h3>
+                        <label><input type="checkbox" name="type" value="tv"> TV Серіал</label>
+                        <label><input type="checkbox" name="type" value="movie"> Фільми</label>
+                        <label><input type="checkbox" name="type" value="ova"> OVA</label>
+                        <label><input type="checkbox" name="type" value="ona"> ONA</label>
+                        <label><input type="checkbox" name="type" value="special"> Спецвипуски</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Оцінка</h3>
+                        <label><input type="radio" name="order_by" value="score"> Рейтинг</label>
+                        <label><input type="radio" name="order_by" value="popularity"> Популярність</label>
+                        <label><input type="radio" name="order_by" value="title"> Алфавіт</label>
+                        <label><input type="radio" name="order_by" value="start_date"> Дата</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Оцінка</h3>
+                        <label><input type="radio" name="rating" value="8"> 8+</label>
+                        <label><input type="radio" name="rating" value="7"> 7+</label>
+                        <label><input type="radio" name="rating" value="6"> 6+</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3 class="filter-title">Аудиторія</h3>
+                        <div class="filter-content">
+                            <label><input type="radio" name="audience" value="shonen"> Сьонен</label>
+                            <label><input type="radio" name="audience" value="seinen"> Сейнен</label>
+                            <label><input type="radio" name="audience" value="shojo"> Шьодже</label>
+                            <label><input type="radio" name="audience" value="josei"> Джьосей</label>
+                            <label><input type="radio" name="audience" value="kids"> Дитяче</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3 class="filter-title">Жанри</h3>
+                        <div class="filter-content">
+                            <label><input type="checkbox" name="genre" value="avant-garde"> Авангард</label>
+                            <label><input type="checkbox" name="genre" value="gourmet"> Гурман</label>
+                            <label><input type="checkbox" name="genre" value="drama"> Драма</label>
+                            <label><input type="checkbox" name="genre" value="comedy"> Комедія</label>
+                            <label><input type="checkbox" name="genre" value="slice_of_life"> Повсякденність</label>
+                            <label><input type="checkbox" name="genre" value="adventure"> Пригоди</label>
+                            <label><input type="checkbox" name="genre" value="romance"> Романтика</label>
+                            <label><input type="checkbox" name="genre" value="supernatural"> Надприроднье</label>
+                            <label><input type="checkbox" name="genre" value="sports"> Спорт</label>
+                            <label><input type="checkbox" name="genre" value="mystery"> Таємниця</label>
+                            <label><input type="checkbox" name="genre" value="thriller"> Триллер</label>
+                            <label><input type="checkbox" name="genre" value="horror"> Жахи</label>
+                            <label><input type="checkbox" name="genre" value="fantasy"> Фентезі</label>
+                            <label><input type="checkbox" name="genre" value="action"> Екшен</label>
+                            <label><input type="checkbox" name="genre" value="ecchi"> Етті</label>
+                            <label><input type="checkbox" name="genre" value="ero"> Еротика</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3 class="filter-title">Теми</h3>
+                        <div class="filter-content">
+                            <label><input type="radio" name="theme" value="anthropomorphism"> Антропоморфізм</label>
+                            <label><input type="radio" name="theme" value="martial_arts"> Бойові мистецтва</label>
+                            <label><input type="radio" name="theme" value="vampires"> Вампіри</label>
+                            <label><input type="radio" name="theme" value="adult_characters"> Дорослі персонажі</label>
+                            <label><input type="radio" name="theme" value="video_games"> Відеоігри</label>
+                            <label><input type="radio" name="theme" value="military"> Військове</label>
+                            <label><input type="radio" name="theme" value="survival"> Виживання</label>
+                            <label><input type="radio" name="theme" value="harem"> Гарем</label>
+                            <label><input type="radio" name="theme" value="racing"> Гонки</label>
+                            <label><input type="radio" name="theme" value="gag_humor"> Гег-гумор</label>
+                            <label><input type="radio" name="theme" value="detective"> Детектив</label>
+                            <label><input type="radio" name="theme" value="violence"> Жорстокість</label>
+                            <label><input type="radio" name="theme" value="childcare"> Турбота про дітей</label>
+                            <label><input type="radio" name="theme" value="high_stakes_game"> Гра з високими
+                                ставками</label>
+                            <label><input type="radio" name="theme" value="idol_female"> Ідоли (Жін.)</label>
+                            <label><input type="radio" name="theme" value="idol_male"> Ідоли (Чоловік)</label>
+                            <label><input type="radio" name="theme" value="fine_arts"> Образотворче мистецтво</label>
+                            <label><input type="radio" name="theme" value="performing_arts"> Виконавче мистецтво</label>
+                            <label><input type="radio" name="theme" value="historical"> Історичний</label>
+                            <label><input type="radio" name="theme" value="isekai"> Ісекай</label>
+                            <label><input type="radio" name="theme" value="yasekai"> Ясікей</label>
+                            <label><input type="radio" name="theme" value="team_sport"> Командний спорт</label>
+                            <label><input type="radio" name="theme" value="space"> Космос</label>
+                            <label><input type="radio" name="theme" value="crossdressing"> Кросдресинг</label>
+                            <label><input type="radio" name="theme" value="otaku_culture"> Культура отаку</label>
+                            <label><input type="radio" name="theme" value="shoujo"> Шьоджо</label>
+                            <label><input type="radio" name="theme" value="highschool"> Старша школа</label>
+                            <label><input type="radio" name="theme" value="demons"> Демони</label>
+                            <label><input type="radio" name="theme" value="mythology"> Міфологія</label>
+                            <label><input type="radio" name="theme" value="mood"> Настрій</label>
+                            <label><input type="radio" name="theme" value="plushie"> Плюшеві іграшки</label>
+                            <label><input type="radio" name="theme" value="puberty"> Пубертат</label>
+                            <label><input type="radio" name="theme" value="reverse_harem"> Реверсний гарем</label>
+                            <label><input type="radio" name="theme" value="sports"> Спорт</label>
+                            <label><input type="radio" name="theme" value="supernatural"> Надприродне</label>
+                            <label><input type="radio" name="theme" value="thriller"> Триллер</label>
+                            <label><input type="radio" name="theme" value="vampire"> Вампіри</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <button type="submit" class="apply-filters-btn">Застосувати</button>
+                    </div>
+                </form>
+            </aside>
+
+        </div>
+
+
+    {% endblock %}
+</main>
+
+{% block js-add %}
+    <script src="{% static 'deps/js/animenu.js' %}"></script>
+    <script src="{% static 'deps/js/sort.js' %}"></script>
+    <script src="{% static 'deps/js/GET-sort.js' %}"></script>
+{% endblock %}

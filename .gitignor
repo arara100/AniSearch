@@ -1,0 +1,31 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Django
+*.sqlite3
+db.sqlite3
+*.log
+media/
+staticfiles/
+
+# PyCharm
+.idea/
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Mac and Windows specific
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+
+# Jupyter Notebook
+.ipynb_checkpoints/
