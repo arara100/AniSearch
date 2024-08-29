@@ -44,7 +44,18 @@
                       </span>
             </div>
             <div class="block2">
-                {% include 'main/anime-list-tops.html' %}
+                <div class="ani-link" id="top-anime-container">
+                    {% for content in popular_anime %}
+                        <div class="anime-item">
+                            <a href="#" class="content">
+                                <img class="content-img" src="{{ content.image }}" alt="{{ content.title }}"/>
+                            </a>
+                            <a href="#" class="content-text">
+                                <p>{{ content.title }}</p>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
