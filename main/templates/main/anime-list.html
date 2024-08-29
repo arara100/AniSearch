@@ -1,0 +1,12 @@
+    <div class="ani-link" id="new-anime-container">
+        {% for content in new_anime %}
+            <div class="anime-item">
+                <a href="#" class="content">
+                    <img class="content-img" src="{{ content.image }}" alt="{{ content.title }}"/>
+                </a>
+                <a href="#" class="content-text">
+                    <p>{{ content.title }}</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>

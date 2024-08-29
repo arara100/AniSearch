@@ -15,6 +15,7 @@ def anime(request):
         url += "&status=" + ",".join(statuses)
 
     if types:
+        url = f"https://api.jikan.moe/v4/top/anime?order_by={order_by}"
         url += "&type=" + ",".join(types)
 
     if genres:
